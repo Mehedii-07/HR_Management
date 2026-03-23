@@ -1,0 +1,262 @@
+/* Salary View Styles */
+.salary-overview {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.salary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.salary-card {
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 5px solid #ddd;
+}
+
+.salary-card.basic {
+  background: #e3f2fd;
+  border-left-color: #2196f3;
+}
+
+.salary-card.allowances {
+  background: #e8f5e8;
+  border-left-color: #4caf50;
+}
+
+.salary-card.deductions {
+  background: #ffebee;
+  border-left-color: #f44336;
+}
+
+.salary-card.net {
+  background: #fff3e0;
+  border-left-color: #ff9800;
+}
+
+.salary-card h4 {
+  color: #35424a;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.salary-card .amount {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.salary-card.basic .amount {
+  color: #2196f3;
+}
+.salary-card.allowances .amount {
+  color: #4caf50;
+}
+.salary-card.deductions .amount {
+  color: #f44336;
+}
+.salary-card.net .amount {
+  color: #ff9800;
+}
+
+.salary-card small {
+  color: #666;
+  font-size: 0.85em;
+}
+
+.salary-status {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.salary-status.status-paid {
+  background: #d4edda;
+  color: #155724;
+}
+.salary-status.status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+.salary-status.status-not_processed {
+  background: #f8f9fa;
+  color: #6c757d;
+}
+
+/* Salary Breakdown */
+.salary-breakdown {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.salary-breakdown h4 {
+  color: #35424a;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e8491d;
+  padding-bottom: 10px;
+}
+
+.breakdown-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.breakdown-item label {
+  font-weight: bold;
+  color: #555;
+  margin: 0;
+}
+
+.breakdown-item span {
+  color: #333;
+}
+
+.text-warning {
+  color: #ffc107;
+  font-weight: bold;
+}
+
+.text-success {
+  color: #28a745;
+}
+.text-danger {
+  color: #dc3545;
+}
+.text-primary {
+  color: #007bff;
+}
+
+/* Salary History */
+.salary-history {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.salary-history h4 {
+  color: #35424a;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e8491d;
+  padding-bottom: 10px;
+}
+
+.history-table-container {
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th,
+.history-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.history-table th {
+  background: #35424a;
+  color: white;
+  font-weight: bold;
+}
+
+.history-table tr:hover {
+  background: #f8f9fa;
+}
+
+/* Salary Information */
+.salary-info {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.salary-info h4 {
+  color: #35424a;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e8491d;
+  padding-bottom: 10px;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.info-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #e8491d;
+}
+
+.info-card h5 {
+  color: #35424a;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+.info-card p {
+  color: #666;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .salary-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .breakdown-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .breakdown-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .history-table {
+    font-size: 0.9em;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: 8px 4px;
+  }
+}

@@ -1,0 +1,296 @@
+/* Attendance View Styles */
+.month-selection {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.month-form {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.month-form label {
+  font-weight: bold;
+  color: #35424a;
+  margin: 0;
+}
+
+.month-form input[type="month"] {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stat-card h3 {
+  color: #35424a;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.stat-card p {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.stat-card small {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.stat-card.present p {
+  color: #28a745;
+}
+.stat-card.absent p {
+  color: #dc3545;
+}
+.stat-card.percentage p {
+  color: #007bff;
+}
+
+.attendance-section {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+/* Calendar Styles */
+.attendance-calendar {
+  margin: 20px 0;
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-bottom: 10px;
+}
+
+.day-header {
+  background: #35424a;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.calendar-day {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  min-height: 80px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.calendar-day.empty {
+  background: transparent;
+  border: none;
+}
+
+.calendar-day.weekend {
+  background: #e9ecef;
+}
+
+.calendar-day.today {
+  border: 2px solid #007bff;
+}
+
+.calendar-day.status-present {
+  background: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.calendar-day.status-absent {
+  background: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.calendar-day.status-half_day {
+  background: #fff3cd;
+  border-color: #ffeaa7;
+}
+
+.calendar-day.status-future {
+  background: #f8f9fa;
+  color: #6c757d;
+}
+
+.day-number {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.day-status {
+  font-size: 0.8em;
+  color: #495057;
+}
+
+/* Attendance Details Table */
+.attendance-details {
+  margin-top: 30px;
+}
+
+.attendance-details h4 {
+  color: #35424a;
+  margin-bottom: 15px;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-table th,
+.attendance-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.attendance-table th {
+  background: #35424a;
+  color: white;
+  font-weight: bold;
+}
+
+.attendance-table tr:hover {
+  background: #f8f9fa;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+.status-badge.status-present {
+  background: #d4edda;
+  color: #155724;
+}
+.status-badge.status-absent {
+  background: #f8d7da;
+  color: #721c24;
+}
+.status-badge.status-half_day {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* Attendance Legend */
+.attendance-legend {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.attendance-legend h4 {
+  color: #35424a;
+  margin-bottom: 15px;
+}
+
+.legend-items {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 2px solid #ddd;
+}
+
+.status-indicator.status-present {
+  background: #d4edda;
+  border-color: #c3e6cb;
+}
+.status-indicator.status-absent {
+  background: #f8d7da;
+  border-color: #f5c6cb;
+}
+.status-indicator.status-half_day {
+  background: #fff3cd;
+  border-color: #ffeaa7;
+}
+.status-indicator.status-future {
+  background: #f8f9fa;
+  border-color: #dee2e6;
+}
+.status-indicator.today {
+  background: #007bff;
+  border-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .month-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .calendar-day {
+    min-height: 60px;
+    padding: 5px;
+  }
+
+  .day-status {
+    font-size: 0.7em;
+  }
+
+  .attendance-table {
+    font-size: 0.9em;
+  }
+
+  .legend-items {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
