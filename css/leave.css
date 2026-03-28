@@ -1,0 +1,619 @@
+/* Leave Application Styles */
+.leave-form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.leave-form-container .form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.leave-form-container .form-group {
+  margin-bottom: 20px;
+}
+
+.leave-form-container .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.leave-form-container .form-group input,
+.leave-form-container .form-group select,
+.leave-form-container .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.leave-form-container .form-group input:focus,
+.leave-form-container .form-group select:focus,
+.leave-form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #e8491d;
+}
+
+.leave-form-container textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background: #545b62;
+  text-decoration: none;
+}
+
+/* Leave Info Section */
+.leave-info {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.leave-info h3 {
+  color: #35424a;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e8491d;
+  padding-bottom: 10px;
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.policy-item {
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #e8491d;
+}
+
+.policy-item h4 {
+  color: #35424a;
+  margin-bottom: 10px;
+}
+
+.policy-item p {
+  color: #666;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+/* Leave Status Page Styles */
+.leave-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stat-card h3 {
+  color: #35424a;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.stat-card p {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.stat-card.approved p {
+  color: #4caf50;
+}
+.stat-card.pending p {
+  color: #ff9800;
+}
+.stat-card.rejected p {
+  color: #f44336;
+}
+
+.leave-table-container {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.leave-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leave-table th,
+.leave-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.leave-table th {
+  background: #35424a;
+  color: white;
+  font-weight: bold;
+}
+
+.leave-table tr:hover {
+  background: #f8f9fa;
+}
+
+.leave-type {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+.leave-type.sick {
+  background: #ffebee;
+  color: #c62828;
+}
+.leave-type.casual {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+.leave-type.annual {
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+.leave-type.emergency {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+.status-pending {
+  background: #fff3cd;
+  color: #856404;
+}
+.status-approved {
+  background: #d4edda;
+  color: #155724;
+}
+.status-rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.reason {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.no-data p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .leave-form-container .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .policy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leave-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .leave-table {
+    font-size: 0.9em;
+  }
+
+  .leave-table th,
+  .leave-table td {
+    padding: 8px 4px;
+  }
+}
+
+/* Leave Policy Styles */
+.leave-balance-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  border-left: 5px solid #e8491d;
+}
+
+.leave-balance-card h3 {
+  color: #35424a;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.balance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.balance-item {
+  text-align: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.balance-item h4 {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.balance-item .total {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #35424a;
+  margin: 0;
+}
+
+.balance-item .available {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #28a745;
+  margin: 0;
+}
+
+.balance-item .taken {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #dc3545;
+  margin: 0;
+}
+
+/* Policy Cards */
+.policy-section {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.policy-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.policy-card {
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 5px solid #ddd;
+}
+
+.policy-card.annual {
+  background: #e8f5e8;
+  border-left-color: #28a745;
+}
+
+.policy-card.sick {
+  background: #e3f2fd;
+  border-left-color: #2196f3;
+}
+
+.policy-card.emergency {
+  background: #fff3cd;
+  border-left-color: #ffc107;
+}
+
+.policy-card.casual {
+  background: #e8f5e9;
+  border-left-color: #4caf50;
+}
+
+.policy-card h4 {
+  color: #35424a;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.policy-card .days {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #e8491d;
+  margin: 10px 0;
+}
+
+.policy-card p {
+  color: #666;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* Rules Section */
+.rules-section {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.rules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rule-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.rule-icon {
+  font-size: 1.5em;
+  margin-top: 5px;
+}
+
+.rule-content h5 {
+  color: #35424a;
+  margin: 0 0 5px 0;
+  font-size: 1.1em;
+}
+
+.rule-content p {
+  color: #666;
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* Leave Balance in Apply Form */
+.leave-balance-info {
+  background: #e3f2fd;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 4px solid #2196f3;
+}
+
+.leave-balance-info h4 {
+  margin: 0 0 10px 0;
+  color: #35424a;
+}
+
+.balance-display {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.balance-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.balance-value {
+  font-weight: bold;
+  color: #e8491d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .balance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .rule-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .balance-display {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Per-Day Salary Deduction Section */
+.per-day-deduction-section {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.per-day-deduction-section h4 {
+  color: #35424a;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e8491d;
+  padding-bottom: 10px;
+}
+
+.per-day-card {
+  background: #fff3cd;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}
+
+.per-day-card h5 {
+  color: #35424a;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.daily-calculation {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.salary-breakdown {
+  margin-bottom: 20px;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.breakdown-item:last-child {
+  border-bottom: none;
+}
+
+.breakdown-item.total {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.breakdown-item .label {
+  color: #666;
+}
+
+.breakdown-item .value {
+  font-weight: bold;
+  color: #333;
+}
+
+.calculation-formula {
+  background: #e8f5e8;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.calculation-formula p {
+  margin: 0;
+  font-size: 0.95em;
+}
+
+.deduction-note {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 15px;
+  border-left: 3px solid #dc3545;
+}
+
+.deduction-note p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+@media (max-width: 768px) {
+  .per-day-deduction-section {
+    padding: 15px;
+  }
+
+  .per-day-card {
+    padding: 15px;
+  }
+
+  .breakdown-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Leave Calculation Section */
+.calculation-section {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.calculation-section h4 {
+  color: #35424a;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e8491d;
+  padding-bottom: 10px;
+}
+
+.formula-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #e8491d;
+}
+
+.formula-card h5 {
+  color: #35424a;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
